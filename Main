@@ -1,0 +1,32 @@
+public class Main {
+    public static void main(String[] args) {
+
+        zoo estado = new zoo();
+        estado.abrir();
+
+        Cliente cliente1 = new Cliente("Yober", 15, "0964544", "cliente", 2);
+        cliente1.mostrarInfo();
+
+        System.out.print("\n");
+
+        Cuidador cuidador1 = new Cuidador("Daniel", 40, "0955554", "12C5", "Cuidador");
+        cuidador1.mostrarInfo();
+
+        System.out.print("\n");
+
+        Veterinario veterinario = new Veterinario("Juan", 29, "09735373", "11k55", "veterinario", "carnivoros");
+        veterinario.mostrarInfo();
+
+        System.out.print("\n");
+
+
+        System.out.print("\n");
+
+        Boleteria cliente = new Boleteria();
+        cliente.venderEntradas(20);
+
+
+
+    }
+}
+
