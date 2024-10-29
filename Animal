@@ -1,0 +1,21 @@
+public class Animal {
+    //attributes
+    String nombre;
+    int edad;
+    String origen;
+    String habitat;
+    String areaZoo;
+    String estadoSalud;
+
+
+    //get
+    public Animal(String areaZoo, String nombre, String estadoSalud){
+        this.nombre = nombre;
+        this.areaZoo = areaZoo;
+        this.estadoSalud = estadoSalud;
+    }
+
+    public void mostrarAnimal(){
+        System.out.print("\nTipo: " + areaZoo + "\nNombre: " + nombre + "\nEstadoSalud: " + estadoSalud);
+    }
+}
