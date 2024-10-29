@@ -1,0 +1,23 @@
+public class zoo {
+    //attributes
+    public String nombre;
+    public String horario;
+    public String direccion;
+    public String telefono;
+    public int capacidadMax;
+
+
+    //operations
+    boolean estaAbierto;
+
+    public boolean abrir(){
+        estaAbierto = true;
+        System.out.print("El zoologico esta abierto :)\n");
+        return estaAbierto;
+    }
+    public boolean cerrar(){
+        estaAbierto = false;
+        System.out.print("El zoologico esta cerrrado :(\n");
+        return estaAbierto;
+    }
+}
