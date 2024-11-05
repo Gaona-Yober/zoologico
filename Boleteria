@@ -1,15 +1,24 @@
 public class Boleteria {
     //attributes
-    String idBoleteria;
-    String ubicacion;
-    //int entradas;
     int entradasDisponibles;
-    int clienteEntradas;
 
 
-    public void venderEntradas(int entradasDisponibles){
 
-                Cliente cliente2 = new Cliente("Miguel", 20, "654984", "Clienta", 4);
+    //get
+    public Boleteria(Cliente cliente1, int entradasDisponibles) {
+        this.entradasDisponibles = entradasDisponibles;
+    }
+
+    //operations
+    public void venderEntradas(Cliente cliente1){
+        entradasDisponibles = entradasDisponibles - cliente1.entradas;
+        System.out.print("El " + cliente1.rol + " " + cliente1.nombre + "compro " + cliente1.entradas + " entradas\nEntradas disponibles: " + entradasDisponibles);
+    }
+
+
+
+
+                /*Cliente cliente2 = new Cliente("Miguel", 20, "654984", "Clienta", 4);
                 Cliente cliente3 = new Cliente("Daniel", 40, "65645", "Ingeniero", 2);
                 Cliente cliente4 = new Cliente("Gerardo", 20, "46548", "cliente", 1);
 
@@ -24,8 +33,6 @@ public class Boleteria {
 
                 System.out.print("\n*** El cliente " + cliente4.nombre + " ha comprado " + cliente4.entradas + " entradas ***");
                 entradasDisponibles = entradasDisponibles - cliente4.entradas;
-                System.out.print("\nEntradas disponibles: " + entradasDisponibles);
+                System.out.print("\nEntradas disponibles: " + entradasDisponibles);*/
 
     }
-
-}
