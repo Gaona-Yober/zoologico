@@ -1,32 +1,23 @@
 public class Main {
     public static void main(String[] args) {
 
-        zoo estado = new zoo();
-        estado.abrir();
-
-        Cliente cliente1 = new Cliente("Yober", 15, "0964544", "cliente", 2);
-        cliente1.mostrarInfo();
-
-        System.out.print("\n");
-
-        Cuidador cuidador1 = new Cuidador("Daniel", 40, "0955554", "12C5", "Cuidador");
-        cuidador1.mostrarInfo();
-
-        System.out.print("\n");
-
-        Veterinario veterinario = new Veterinario("Juan", 29, "09735373", "11k55", "veterinario", "carnivoros");
-        veterinario.mostrarInfo();
-
-        System.out.print("\n");
+        new zoo(true);
 
 
-        System.out.print("\n");
+        Cliente cliente1 = new Cliente("Yober ", 18, "5555", "cliente", 3);
+        Boleteria cliente = new Boleteria(cliente1, 20);
+        cliente.venderEntradas(cliente1);
 
-        Boleteria cliente = new Boleteria();
-        cliente.venderEntradas(20);
+        Habitat habitat1 = new Habitat(20, "Terrestre");
+        Cuidador cuidador1 = new Cuidador("Juan", 50, "521", "11C4T", "CUIDADOR");
+        cuidador1.quitarAnimales(habitat1, "tigre", 1);
 
+        Animal animal = new Animal("cebra", "pasto", false);
+        Cuidador cuidador = new Cuidador("pepito", 20, "5454", "26h2", "cuidador");
+        cuidador.alimentar(animal, cuidador);
 
-
+        Veterinario veterinario = new Veterinario("PEPE", 20, "0", "0", "veterinario", "carnivoros");
+        veterinario.realizarChequeo(animal);
     }
 }
 
